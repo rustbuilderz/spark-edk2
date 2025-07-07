@@ -1,6 +1,6 @@
 # spark-edk2
 
-**spark-edk2** is a custom bootloader built on top of [EDK II (TianoCore)](https://github.com/tianocore/edk2), offering a modular and extensible platform for modern UEFI development. This project may include Rust-based enhancements and is designed to be simple to build and extend.
+**spark-edk2** is a custom bootloader built on top of [EDK II (TianoCore)](https://github.com/tianocore/edk2), offering a modular and extensible platform for modern UEFI development. Designed to be simple to build and extend.
 
 ---
 
