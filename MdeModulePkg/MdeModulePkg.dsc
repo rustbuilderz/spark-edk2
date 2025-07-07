@@ -11,13 +11,13 @@
 ##
 
 [Defines]
-  PLATFORM_NAME                  = MdeModule
+  PLATFORM_NAME                  = spark
   PLATFORM_GUID                  = 587CE499-6CBE-43cd-94E2-186218569478
   PLATFORM_VERSION               = 0.98
   DSC_SPECIFICATION              = 0x00010005
-  OUTPUT_DIRECTORY               = Build/MdeModule
-  SUPPORTED_ARCHITECTURES        = IA32|X64|EBC|ARM|AARCH64|RISCV64|LOONGARCH64
-  BUILD_TARGETS                  = DEBUG|RELEASE|NOOPT
+  OUTPUT_DIRECTORY               = Build/spark
+  SUPPORTED_ARCHITECTURES        = X64
+  BUILD_TARGETS                  = RELEASE
   SKUID_IDENTIFIER               = DEFAULT
 
 !include MdePkg/MdeLibs.dsc.inc
@@ -208,6 +208,8 @@
   gEfiMdeModulePkgTokenSpaceGuid.PcdRecoveryFileName|L"FVMAIN.FV"
 
 [Components]
+  .spark\spark.inf
+
   MdeModulePkg/Application/HelloWorld/HelloWorld.inf
   MdeModulePkg/Application/DumpDynPcd/DumpDynPcd.inf
   MdeModulePkg/Application/MemoryProfileInfo/MemoryProfileInfo.inf
@@ -525,7 +527,6 @@
   MdeModulePkg/Universal/FaultTolerantWriteDxe/FaultTolerantWriteSmmDxe.inf
   MdeModulePkg/Universal/RegularExpressionDxe/RegularExpressionDxe.inf
   MdeModulePkg/Universal/SmmCommunicationBufferDxe/SmmCommunicationBufferDxe.inf
-  MdeModulePkg/Universal/Disk/RamDiskDxe/RamDiskDxe.inf
   MdeModulePkg/Library/TraceHubDebugSysTLib/BaseTraceHubDebugSysTLib.inf
   MdeModulePkg/Library/TraceHubDebugSysTLib/PeiTraceHubDebugSysTLib.inf
   MdeModulePkg/Library/TraceHubDebugSysTLib/DxeSmmTraceHubDebugSysTLib.inf
